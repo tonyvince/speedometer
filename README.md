@@ -20,22 +20,26 @@ Speedometer is a simple ruby script that does the following
 
 ##### 2.Install dependencies
 
-  Go to root `$ cd speedometer`
-  and install dependecies using bundler `$ bundle install`.
+  Go to root `$ cd speedometer` and install dependecies using bundler `$ bundle install`.
 
   if you see an error `bundle: command not found` then first install bundler `$ gem install bundler`
 
 ##### 3.Edit settings
 
-  Open `config/settings.yml` on your favorite text editor.
-  Edit `email_to` - This is the email you will get email notifications to
+  Open `config/settings.yml` on your favorite text editor to make changes.
+
+  Edit `email_to` - This is the email you will get email notifications.
+
   Edit `email_from` - This is the email address that will appear as the sender of the notofocation.
+
   Edit `min_download_rate` - If speed drops below this value, you will get an email notification
 
 #### 4.Change language (Optional)
 
   To send notifications in a custom language, add a proper translation file in `config/locales`.
+
   Refer `config/locales/en.yml` and `config/locales/de.yml` for formatting.
+
   Change to your desired locale on line number 6 of `runner.rb`.
 
   Ex:- if you want to send emails in Chinese, add a translations file `zh.yml` in `config/locales` directory.
@@ -93,6 +97,7 @@ Speedometer is a simple ruby script that does the following
 #### 6. Schedule the script to run every n minutes.
 
   By default the script will run every 20 minutes. You can change this in `config/schedule.rb`.
+
   Refer [here](https://github.com/javan/whenever#example-schedulerb-file) for diffrent scheduling options.
 
   ###### Update crontab
@@ -101,11 +106,11 @@ Speedometer is a simple ruby script that does the following
 
   If you see a confirmation window for permissions, press o.k
 
-  [![OK](images/permission.png)]
+  ![OK](images/permission.png)
 
 You are all set 👍 you can see your speed log in `log/speedlog.csv` updated every n minutes.
 
-  [![Logfile opend in numbers](images/log_file.png)]
+  ![Logfile opend in numbers](images/log_file.png)
 
 Also you should be getting email notifications if the speed is less than the minimum threshold.
 
