@@ -1,0 +1,9 @@
+en:
+  email:
+    subject: ACHTUNG - Ihr Internet ist inaktiv
+    body: |
+      In Ihrem Netzwerk herrscht langsamer Datenverkehr.
+
+      Downloadrate: %{download_rate}
+      Upload-Rate: %{upload_rate}
+      Latenz: %{latency}

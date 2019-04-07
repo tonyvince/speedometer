@@ -1,0 +1,10 @@
+en:
+  email:
+    subject: ATTENTION - Your internet is down
+    body: |
+      You network is experiencing slow traffic.
+
+      Download rate: %{download_rate}
+      Upload rate: %{upload_rate}
+      Latency: %{latency}
+

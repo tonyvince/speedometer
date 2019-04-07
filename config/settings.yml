@@ -1,0 +1,4 @@
+settings:
+  email_to: user@example.com
+  email_from: user@example.com
+  min_download_rate: 30
