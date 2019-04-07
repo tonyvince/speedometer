@@ -14,17 +14,17 @@ Speedometer is a simple ruby script that does the following
 
 ### Installation
 
-##### 1.Clone this repo
+#### 1.Clone this repo
 
   `$ git clone git@github.com:tonyvince/speedometer.git`
 
-##### 2.Install dependencies
+#### 2.Install dependencies
 
   Go to root `$ cd speedometer` and install dependecies using bundler `$ bundle install`.
 
   if you see an error `bundle: command not found` then first install bundler `$ gem install bundler`
 
-##### 3.Edit settings
+#### 3.Edit settings
 
   Open `config/settings.yml` on your favorite text editor to make changes.
 
@@ -51,25 +51,25 @@ Speedometer is a simple ruby script that does the following
 
   Use postfix to send emails securly
 
-  1. Create a file to store the credentials:
+  I. Create a file to store the credentials:
 
     `$ sudo vi /etc/postfix/sasl_passwd`
 
-  2. Open the file to edit and add the email host data with the credentials:
+  II. Open the file to edit and add the email host data with the credentials:
 
     `smtp.gmail.com:587 your_username@gmail.com:your_password`
 
-  3. Now run:
+  III. Now run:
 
     `$ sudo postmap /etc/postfix/sasl_passwd`
 
-  4. Prepare the postfix main config file:
+  IV. Prepare the postfix main config file:
 
     `$ sudo vi /etc/postfix/main.cf`
 
-  5. Add/update these lines
+  V. Add/update these lines
 
-    ```bash
+    ```
     relayhost=smtp.gmail.com:587
     smtp_sasl_auth_enable=yes
     smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
@@ -81,15 +81,16 @@ Speedometer is a simple ruby script that does the following
     smtp_sasl_mechanism_filter = plain
     ```
 
-  6. Check postfix status
+  VI. Check postfix status
 
     `sudo postfix status`
 
-  7. If postfix is running already, restart the service to update the configuration
+  VII. If postfix is running already, restart the service to update the configuration
 
     `$ sudo postfix stop && sudo postfix start`
 
     if not, simply start the postfix service `$ sudo postfix start`
+
 
   **NOTE - If you are using gmail to send email notifications make sure to [enable less secure apps](https://support.google.com/accounts/answer/6010255) for your account**
 
@@ -113,6 +114,8 @@ You are all set 👍 you can see your speed log in `log/speedlog.csv` updated ev
   ![Logfile opend in numbers](images/log_file.png)
 
 Also you should be getting email notifications if the speed is less than the minimum threshold.
+
+  ![Email](images/email.png)
 
 
 #### Trouble shooting
