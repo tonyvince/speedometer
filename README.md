@@ -53,23 +53,22 @@ Speedometer is a simple ruby script that does the following
 
   I. Create a file to store the credentials:
 
-    `$ sudo vi /etc/postfix/sasl_passwd`
+    $ sudo vi /etc/postfix/sasl_passwd
 
   II. Open the file to edit and add the email host data with the credentials:
 
-    `smtp.gmail.com:587 your_username@gmail.com:your_password`
+    smtp.gmail.com:587 your_username@gmail.com:your_password
 
   III. Now run:
 
-    `$ sudo postmap /etc/postfix/sasl_passwd`
+    $ sudo postmap /etc/postfix/sasl_passwd
 
   IV. Prepare the postfix main config file:
 
-    `$ sudo vi /etc/postfix/main.cf`
+    $ sudo vi /etc/postfix/main.cf
 
   V. Add/update these lines
 
-    ```
     relayhost=smtp.gmail.com:587
     smtp_sasl_auth_enable=yes
     smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
@@ -79,17 +78,16 @@ Speedometer is a simple ruby script that does the following
     smtp_sasl_security_options = noanonymous
     smtp_always_send_ehlo = yes
     smtp_sasl_mechanism_filter = plain
-    ```
 
   VI. Check postfix status
 
-    `sudo postfix status`
+    $ sudo postfix status
 
   VII. If postfix is running already, restart the service to update the configuration
 
-    `$ sudo postfix stop && sudo postfix start`
+    $ sudo postfix stop && sudo postfix start
 
-    if not, simply start the postfix service `$ sudo postfix start`
+  if not, simply start the postfix service `$ sudo postfix start`
 
 
   **NOTE - If you are using gmail to send email notifications make sure to [enable less secure apps](https://support.google.com/accounts/answer/6010255) for your account**
@@ -118,13 +116,13 @@ Also you should be getting email notifications if the speed is less than the min
   ![Email](images/email.png)
 
 
-#### Trouble shooting
+## Trouble shooting
 
 - Check cron log for any errors in the script - `log/cron.log`
 - Check postfix emails que for any errors - `$ mailq`
 - If you see 'Username and password not accepted' error in your postfix logs, check [this](https://support.google.com/mail/answer/7126229?p=BadCredentials&visit_id=636901414125399742-876647204&rd=2#cantsignin)
 
-#### To Do
+## To Do
 
 - Add unit tests.
 - Make scheduling intervel easily configurable through settings.
