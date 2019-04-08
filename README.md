@@ -69,12 +69,12 @@ Speedometer is a simple ruby script that does the following
 
   V. Add/update these lines
 
-    relayhost=smtp.gmail.com:587
-    smtp_sasl_auth_enable=yes
-    smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
-    smtp_use_tls=yes
-    smtp_tls_security_level=encrypt
-    tls_random_source=dev:/dev/urandom
+    relayhost = smtp.gmail.com:587
+    smtp_sasl_auth_enable = yes
+    smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+    smtp_use_tls = yes
+    smtp_tls_security_level = encrypt
+    tls_random_source = dev:/dev/urandom
     smtp_sasl_security_options = noanonymous
     smtp_always_send_ehlo = yes
     smtp_sasl_mechanism_filter = plain
