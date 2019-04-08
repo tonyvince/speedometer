@@ -99,7 +99,7 @@ Speedometer is a simple ruby script that does the following
 
   Refer [here](https://github.com/javan/whenever#example-schedulerb-file) for diffrent scheduling options.
 
-  ###### Update crontab
+  ##### Update crontab
 
   run `$ whenever -i` to update the crontab to run the script every n minutes specvified in `config/schedule.rb`
 
@@ -116,7 +116,7 @@ Also you should be getting email notifications if the speed is less than the min
   ![Email](images/email.png)
 
 
-## Trouble shooting
+## Troubleshooting
 
 - Check cron log for any errors in the script - `log/cron.log`
 - Check postfix emails que for any errors - `$ mailq`
