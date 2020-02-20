@@ -3,8 +3,16 @@
 Speedometer is a simple ruby script that does the following
 
 - Automatically check network speed every 20 minutes
-- Log Date, Time, Dowload rate, Upload rate, and Latency to a csv file
+- Log Date, Time, Download rate, Upload rate, and Latency to a csv file
 - Send email notification if speed is less than a configurable minimum speed
+
+you can see your speed log in `log/speedlog.csv` updated every n minutes.
+
+  ![Logfile opend in numbers](images/log_file.png)
+
+email notifications look like this.
+
+  ![Email](images/email.png)
 
 ### Prerequisites
 
@@ -107,13 +115,7 @@ Speedometer is a simple ruby script that does the following
 
   ![OK](images/permission.png)
 
-You are all set 👍 you can see your speed log in `log/speedlog.csv` updated every n minutes.
-
-  ![Logfile opend in numbers](images/log_file.png)
-
-Also you should be getting email notifications if the speed is less than the minimum threshold.
-
-  ![Email](images/email.png)
+You are all set 👍
 
 
 ## Troubleshooting
